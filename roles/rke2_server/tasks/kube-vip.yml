@@ -11,7 +11,7 @@
   copy:
     src: '{{ item }}'
     dest: "/var/lib/rancher/rke2/server/manifest/{{ item }}"
-    onwer: root
+    owner: root
     group: root
     mode: 0644
   with_items:
