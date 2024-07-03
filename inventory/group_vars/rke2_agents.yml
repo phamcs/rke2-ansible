@@ -2,9 +2,32 @@
 
 # Primary RKE2 agent configuration parameters. Remove the curly braces ( {} ) and add your configuration.
 # See https://docs.rke2.io/install/install_options/linux_agent_config/ for all configuration options.
-rke2_config: {}
+#rke2_config: {}
   # debug: false
 
 # See https://docs.rke2.io/install/containerd_registry_configuration/
 # Add a registry configuration file by specifying the file path on the control host
 # registry_config_file_path: "{{ playbook_dir }}/sample_files/registries.yaml"
+rke2_config:
+  hosts:
+    w0rk3r01:
+      node_labels:
+        - agent1Label=true
+      node_ip: "192.168.0.20"
+      node_name: "w0rk3r01"
+      # bind_address: "10.10.10.10"
+      advertise_address: "192.168.0.20"
+    w0rk3r02:
+      node_labels:
+        - agent2Label=true
+      node_ip: "192.168.0.14"
+      node_name: "w0rk3r02"
+      # bind_address: "10.10.10.10"
+      advertise_address: "192.168.0.14"
+    w0rk3r03:
+      node_labels:
+        - agent3Label=true
+      node_ip: "192.168.0.18"
+      node_name: "w0rk3r03"
+      # bind_address: "10.10.10.10"
+      advertise_address: "192.168.0.18"
