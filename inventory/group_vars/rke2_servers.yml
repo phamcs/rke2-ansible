@@ -21,10 +21,10 @@ rke2_config:
 #  # Enable only when auditing is enabled, blocks API when audit fails
 #  #- "audit-log-mode=blocking-strict"
 #
-  kubelet-arg:
-  - "feature-gates=DynamicKubeletConfig=false"
-  - "protect-kernel-defaults=true"
-  - "streaming-connection-idle-timeout=5m"
+  # kubelet-arg:
+  # - "feature-gates=DynamicKubeletConfig=false"
+  # - "protect-kernel-defaults=true"
+  # - "streaming-connection-idle-timeout=5m"
 #
 #  # Available in RKE2 1.21
   #etcd-extra-env:
@@ -35,8 +35,8 @@ rke2_config:
   
   hosts:
     infra01:
-    node_labels:
-      - server1Label=true
+    # node_labels:
+    #   - server1Label=true
     node_ip: "192.168.0.21"
     #node_name: "infra01"
     # bind_address: "10.10.10.10"
@@ -46,8 +46,8 @@ rke2_config:
     # - CriticalAddonsOnly=true:NoSchedule
     # cloud_provider_name: "aws"
   infra02:
-    node_labels:
-      - server2Label=true
+    # node_labels:
+    #   - server2Label=true
     node_ip: "192.168.0.22"
     #node_name: "infra02"
     # bind_address: "10.10.10.10"
@@ -57,8 +57,8 @@ rke2_config:
     # - CriticalAddonsOnly=true:NoSchedule
     # cloud_provider_name: "aws"
   infra03:
-    node_labels:
-      - server3Label=true
+    # node_labels:
+    #   - server3Label=true
     node_ip: "192.168.0.23"
     #node_name: "infra03"
     # bind_address: "10.10.10.10"
