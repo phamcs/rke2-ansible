@@ -17,4 +17,4 @@
   with_items:
     - kube-vip-rbac.yml
     - kube-vip.yml
-  when: inventory_hostname in groups['rke2_servers']
+  when: inventory_hostname in groups['rke2_servers'][0]
