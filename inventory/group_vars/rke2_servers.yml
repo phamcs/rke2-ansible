@@ -28,8 +28,8 @@ rke2_config:
 #
 #  # Available in RKE2 1.21
   etcd-extra-env:
-   - "ETCD_AUTO_TLS=true"
-   - "ETCD_PEER_AUTO_TLS=true"
+  - "ETCD_AUTO_TLS=true"
+  - "ETCD_PEER_AUTO_TLS=true"
 #
   write-kubeconfig-mode: "0640"
 
