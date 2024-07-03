@@ -15,6 +15,6 @@
     group: root
     mode: 0644
   with_items:
-    - kube-vip-rbac.yml
-    - kube-vip.yml
+    - kube-vip-rbac.yaml
+    - kube-vip.yaml
   when: inventory_hostname in groups['rke2_servers'][0]
