@@ -18,3 +18,7 @@
     - kube-vip-rbac.yaml
     - kube-vip.yaml
   when: inventory_hostname in groups['rke2_servers'][0]
+
+- name: Restart rke2-server
+  shell: |
+    systemctl restart rke2-server
