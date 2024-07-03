@@ -6,18 +6,18 @@
 # Example of possible rke2_config.
 rke2_config:
   #selinux: true
-  profile: cis-1.6
-  kube-controller-manager-arg:
-  - "tls-min-version=VersionTLS12"
-  - "tls-cipher-suites=TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384"
-  kube-scheduler-arg:
-  - "tls-min-version=VersionTLS12"
-  - "tls-cipher-suites=TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384"
-  kube-apiserver-arg:
-  - "tls-min-version=VersionTLS12"
-  - "tls-cipher-suites=TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384"
-  - "enable-admission-plugins=ValidatingAdmissionWebhook,NodeRestriction,PodSecurityPolicy"
-  - "request-timeout=300s"
+  # profile: cis-1.6
+  # kube-controller-manager-arg:
+  # - "tls-min-version=VersionTLS12"
+  # - "tls-cipher-suites=TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384"
+  # kube-scheduler-arg:
+  # - "tls-min-version=VersionTLS12"
+  # - "tls-cipher-suites=TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384"
+  # kube-apiserver-arg:
+  # - "tls-min-version=VersionTLS12"
+  # - "tls-cipher-suites=TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384"
+  # - "enable-admission-plugins=ValidatingAdmissionWebhook,NodeRestriction,PodSecurityPolicy"
+  # - "request-timeout=300s"
 #  # Enable only when auditing is enabled, blocks API when audit fails
 #  #- "audit-log-mode=blocking-strict"
 #
@@ -33,40 +33,40 @@ rke2_config:
 #
   write-kubeconfig-mode: "0640"
   
-  hosts:
-    infra01:
-    # node_labels:
-    #   - server1Label=true
-      node_ip: "192.168.0.21"
-    #node_name: "infra01"
-    # bind_address: "10.10.10.10"
-      advertise_address: "192.168.0.21"
-    # node_external_ip: "52.52.52.52"
-    # node_taints:
-    # - CriticalAddonsOnly=true:NoSchedule
-    # cloud_provider_name: "aws"
-    infra02:
-      # node_labels:
-      #   - server2Label=true
-      node_ip: "192.168.0.22"
-      #node_name: "infra02"
-      # bind_address: "10.10.10.10"
-      advertise_address: "192.168.0.22"
-      # node_external_ip: "52.52.52.52"
-      # node_taints:
-      # - CriticalAddonsOnly=true:NoSchedule
-      # cloud_provider_name: "aws"
-    infra03:
-      # node_labels:
-      #   - server3Label=true
-      node_ip: "192.168.0.23"
-      #node_name: "infra03"
-      # bind_address: "10.10.10.10"
-      advertise_address: "192.168.0.23"
-      # node_external_ip: "52.52.52.52"
-      # node_taints:
-      # - CriticalAddonsOnly=true:NoSchedule
-      # cloud_provider_name: "aws"
+  # hosts:
+  #   infra01:
+  #   # node_labels:
+  #   #   - server1Label=true
+  #     node_ip: "192.168.0.21"
+  #   #node_name: "infra01"
+  #   # bind_address: "10.10.10.10"
+  #     advertise_address: "192.168.0.21"
+  #   # node_external_ip: "52.52.52.52"
+  #   # node_taints:
+  #   # - CriticalAddonsOnly=true:NoSchedule
+  #   # cloud_provider_name: "aws"
+  #   infra02:
+  #     # node_labels:
+  #     #   - server2Label=true
+  #     node_ip: "192.168.0.22"
+  #     #node_name: "infra02"
+  #     # bind_address: "10.10.10.10"
+  #     advertise_address: "192.168.0.22"
+  #     # node_external_ip: "52.52.52.52"
+  #     # node_taints:
+  #     # - CriticalAddonsOnly=true:NoSchedule
+  #     # cloud_provider_name: "aws"
+  #   infra03:
+  #     # node_labels:
+  #     #   - server3Label=true
+  #     node_ip: "192.168.0.23"
+  #     #node_name: "infra03"
+  #     # bind_address: "10.10.10.10"
+  #     advertise_address: "192.168.0.23"
+  #     # node_external_ip: "52.52.52.52"
+  #     # node_taints:
+  #     # - CriticalAddonsOnly=true:NoSchedule
+  #     # cloud_provider_name: "aws"
 
 # See https://kubernetes.io/docs/tasks/debug-application-cluster/audit/
 # Add a policy configuration file by specifying the file path on the control host
