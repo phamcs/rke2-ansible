@@ -5,6 +5,7 @@
 
 # Example of possible rke2_config.
 rke2_config:
+  debug: true
   #selinux: true
   # profile: cis-1.6
   # kube-controller-manager-arg:
