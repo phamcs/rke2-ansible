@@ -9,31 +9,26 @@
 # Add a registry configuration file by specifying the file path on the control host
 # registry_config_file_path: "{{ playbook_dir }}/sample_files/registries.yaml"
 rke2_config:
+  debug: true
   vars:
-    token: "K10cc31104994d0102d2d4a1bc116748b1bdedf7b67faa4de94dacc5eacd2844177::server:d99dafc3644bc6a96c50e7de248bee54"
+    # token: "K10cc31104994d0102d2d4a1bc116748b1bdedf7b67faa4de94dacc5eacd2844177::server:d99dafc3644bc6a96c50e7de248bee54"
     tls-san:
     - "192.168.0.202"
     - "rke2vip.superasian.net"
-    server: "https://rke2vip.superasian.net:9345"
+    # server: "https://rke2vip.superasian.net:9345"
   hosts:
     w0rk3r01:
-      node_labels:
-        - agent1Label=true
       node_ip: "192.168.0.20"
-      #node_name: "w0rk3r01"
+      node_name: "w0rk3r01"
       # bind_address: "10.10.10.10"
       advertise_address: "192.168.0.20"
     w0rk3r02:
-      node_labels:
-        - agent2Label=true
       node_ip: "192.168.0.14"
-      #node_name: "w0rk3r02"
+      node_name: "w0rk3r02"
       # bind_address: "10.10.10.10"
       advertise_address: "192.168.0.14"
     w0rk3r03:
-      node_labels:
-        - agent3Label=true
       node_ip: "192.168.0.18"
-      #node_name: "w0rk3r03"
+      node_name: "w0rk3r03"
       # bind_address: "10.10.10.10"
       advertise_address: "192.168.0.18"
