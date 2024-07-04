@@ -25,8 +25,8 @@ rke2_versioned_yum_repo:
 
 rke2_config:
   debug: true
-  token: "K107c0d530e7f072a5f6f418e934645794c19fb21a7c3563c1da9e0b3c977bc1bc0::server:14e3d35ba6610ffcda92ec763324d884"
+  # token: "K107c0d530e7f072a5f6f418e934645794c19fb21a7c3563c1da9e0b3c977bc1bc0::server:14e3d35ba6610ffcda92ec763324d884"
   tls-san:
     - "192.168.0.202"
     - "rke2vip.superasian.net"
-  server: "https://rke2vip.superasian.net:9345"
+  # server: "https://rke2vip.superasian.net:9345"
