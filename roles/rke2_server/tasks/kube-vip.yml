@@ -19,6 +19,25 @@
     - kube-vip.yaml
   when: inventory_hostname in groups['rke2_servers'][0]
 
+- name: Create the RKE2 tls directory
+  ansible.builtin.file:
+    state: directory
+    path: "/var/lib/rancher/rke2/server/tls/"
+    owner: root
+    group: root
+    mode: 0744
+
+- name: Copy cacerts files
+  copy:
+    src: '{{ item }}'
+    dest: "/var/lib/rancher/rke2/server/tls/{{ item }}"
+    owner: root
+    group: root
+    mode: 0644
+  with_items:
+    - cacerts.pem
+  when: inventory_hostname in groups['rke2_servers']
+
 - name: Restart rke2-server
   shell: |
     systemctl restart rke2-server
