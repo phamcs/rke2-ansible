@@ -10,12 +10,6 @@
 # registry_config_file_path: "{{ playbook_dir }}/sample_files/registries.yaml"
 rke2_config:
   debug: true
-  vars:
-    # token: "K10cc31104994d0102d2d4a1bc116748b1bdedf7b67faa4de94dacc5eacd2844177::server:d99dafc3644bc6a96c50e7de248bee54"
-    tls-san:
-    - "192.168.0.202"
-    - "rke2vip.superasian.net"
-    # server: "https://rke2vip.superasian.net:9345"
   hosts:
     w0rk3r01:
       node_ip: "192.168.0.20"
