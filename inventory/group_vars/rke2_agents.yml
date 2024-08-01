@@ -10,12 +10,13 @@
 # registry_config_file_path: "{{ playbook_dir }}/sample_files/registries.yaml"
 rke2_config:
   debug: true
-  # hosts:
-  #   w0rk3r01:
-  #     node_ip: "192.168.0.20"
-  #     node_name: "w0rk3r01"
-  #     # bind_address: "10.10.10.10"
-  #     advertise_address: "192.168.0.20"
+  cni: calico
+  hosts:
+    w0rk3r01:
+    node_ip: "192.168.0.20"
+    node_name: "w0rk3r01"
+    bind_address: "192.168.0.20"
+    advertise_address: "192.168.0.20"
   #   w0rk3r02:
   #     node_ip: "192.168.0.14"
   #     node_name: "w0rk3r02"
