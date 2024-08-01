@@ -27,6 +27,12 @@ rke2_config:
   debug: true
   # token: "K10f3480774727882fe9c720d0997fed723401e3d7f6f03a0c0b02d170870da57e8::server:488ff0d303743c0c49401b034f7830a7"
   tls-san:
+    - "192.168.0.21"
+    - "infra01"
+    - "192.168.0.22"
+    - "infra02"
+    - "192.168.0.23"
+    - "infra03
     - "192.168.0.202"
     - "rke2vip.superasian.net"
   cni: calico
