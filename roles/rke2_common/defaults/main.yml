@@ -25,7 +25,7 @@ rke2_versioned_yum_repo:
 
 rke2_config:
   debug: true
-  # token: "K1055b583da31e9673178ac963c82f8ddebb15f9fd9290d615129b289fa6194a32c::server:aa08135936f30602bf50e5a9c2f29909"
+  token: "K10eb439cf2efefb5a45ae8ca984e67f5b93ddf61cda5f1ff2046c87db867d511f5::server:cd25cc06db4534dadc62fdd8d7bd0e23"
   tls-san:
     - "192.168.0.21"
     - "infra01"
@@ -36,4 +36,4 @@ rke2_config:
     - "192.168.0.202"
     - "rke2vip.superasian.net"
   cni: calico
-  # server: "https://rke2vip.superasian.net:9345"
+  server: "https://rke2vip.superasian.net:9345"
