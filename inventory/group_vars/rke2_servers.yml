@@ -57,24 +57,24 @@ rke2_config:
     # node_taints:
     # - CriticalAddonsOnly=true:NoSchedule
     # cloud_provider_name: "aws"
-    infra02:
-      # node_labels:
-      #   - server2Label=true
-      node_ip: "192.168.0.22"
-      node_name: "infra02"
-      bind_address: "192.168.0.22"
-      advertise_address: "192.168.0.22"
-  #     # node_external_ip: "52.52.52.52"
-  #     # node_taints:
-  #     # - CriticalAddonsOnly=true:NoSchedule
-  #     # cloud_provider_name: "aws"
-    infra03:
-      # node_labels:
-      #   - server3Label=true
-      node_ip: "192.168.0.23"
-      node_name: "infra03"
-      bind_address: "192.168.0.23"
-      advertise_address: "192.168.0.23"
+  #   infra02:
+  #     # node_labels:
+  #     #   - server2Label=true
+  #     node_ip: "192.168.0.22"
+  #     node_name: "infra02"
+  #     bind_address: "192.168.0.22"
+  #     advertise_address: "192.168.0.22"
+  # #     # node_external_ip: "52.52.52.52"
+  # #     # node_taints:
+  # #     # - CriticalAddonsOnly=true:NoSchedule
+  # #     # cloud_provider_name: "aws"
+  #   infra03:
+  #     # node_labels:
+  #     #   - server3Label=true
+  #     node_ip: "192.168.0.23"
+  #     node_name: "infra03"
+  #     bind_address: "192.168.0.23"
+  #     advertise_address: "192.168.0.23"
   #     # node_external_ip: "52.52.52.52"
   #     # node_taints:
   #     # - CriticalAddonsOnly=true:NoSchedule
