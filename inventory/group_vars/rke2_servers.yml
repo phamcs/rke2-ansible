@@ -45,7 +45,7 @@ rke2_config:
   - "rke2vip.superasian.net"
   cni: calico
   #server: "https://rke2vip.superasian.net:9345"
-  hosts:
+  #hosts:
     infra01:
     # node_labels:
     #   - server1Label=true
