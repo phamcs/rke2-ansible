@@ -11,7 +11,7 @@
 rke2_config:
   debug: true
   cni: calico
-  hosts:
+  #hosts:
     w0rk3r01:
       node_ip: "192.168.0.20"
       node_name: "w0rk3r01"
