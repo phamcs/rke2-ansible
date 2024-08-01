@@ -32,7 +32,7 @@ rke2_config:
     - "192.168.0.22"
     - "infra02"
     - "192.168.0.23"
-    - "infra03
+    - "infra03"
     - "192.168.0.202"
     - "rke2vip.superasian.net"
   cni: calico
