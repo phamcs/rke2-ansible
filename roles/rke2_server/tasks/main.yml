@@ -14,7 +14,7 @@
   ansible.builtin.include_tasks: first_server.yml
   when: inventory_hostname in groups['rke2_servers'][0]
 
-- name: Setup initial server
+- name: Setup kube-vip
   ansible.builtin.include_tasks: kube-vip.yml
   when: inventory_hostname in groups['rke2_servers'][0]
 
