@@ -2,7 +2,7 @@
 - name: Create the RKE2 manifest directory
   ansible.builtin.file:
     state: directory
-    path: "/var/lib/rancher/rke2/server/manifest/"
+    path: "/var/lib/rancher/rke2/server/manifests/"
     owner: root
     group: root
     mode: 0744
@@ -10,7 +10,7 @@
 - name: Copy kube-vip RBAC & kube-vip files
   copy:
     src: '{{ item }}'
-    dest: "/var/lib/rancher/rke2/server/manifest/{{ item }}"
+    dest: "/var/lib/rancher/rke2/server/manifests/{{ item }}"
     owner: root
     group: root
     mode: 0644
