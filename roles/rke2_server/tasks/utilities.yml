@@ -27,4 +27,5 @@
 - name: Install some useful utilities
   shell: |
     curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
+    curl -s "https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/hack/install_kustomize.sh"  | bash
     curl -L https://github.com/kubernetes/kompose/releases/download/v1.34.0/kompose-linux-amd64 -o /usr/local/bin/kompose
