@@ -24,6 +24,7 @@
     dest: "/root/.kube/config"
     state: link
 
-- name: Install helm
+- name: Install some useful utilities
   shell: |
     curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
+    curl -L https://github.com/kubernetes/kompose/releases/download/v1.34.0/kompose-linux-amd64 -o /usr/local/bin/kompose
