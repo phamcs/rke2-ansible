@@ -37,7 +37,4 @@
   with_items:
     - cacerts.pem
   when: inventory_hostname in groups['rke2_servers']
-
-- name: Restart rke2-server
-  shell: |
-    systemctl restart rke2-server
+  notify: Restart rke2-server
