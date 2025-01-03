@@ -3,7 +3,6 @@
 # See https://docs.rke2.io/install/install_options/server_config/ for all configuration options.
 #rke2_config: {}
 
-# Example of possible rke2_config.
 rke2_config:
   hosts:
     infra01:
