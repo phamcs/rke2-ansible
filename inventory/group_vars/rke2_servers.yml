@@ -7,31 +7,31 @@
 rke2_config:
   debug: true
   #selinux: true
-  # profile: cis-1.6
-  # kube-controller-manager-arg:
-  # - "tls-min-version=VersionTLS12"
-  # - "tls-cipher-suites=TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384"
-  # kube-scheduler-arg:
-  # - "tls-min-version=VersionTLS12"
-  # - "tls-cipher-suites=TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384"
-  # kube-apiserver-arg:
-  # - "tls-min-version=VersionTLS12"
-  # - "tls-cipher-suites=TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384"
-  # - "enable-admission-plugins=ValidatingAdmissionWebhook,NodeRestriction,PodSecurityPolicy"
-  # - "request-timeout=300s"
-#  # Enable only when auditing is enabled, blocks API when audit fails
-#  #- "audit-log-mode=blocking-strict"
-#
-  # kubelet-arg:
-  # - "feature-gates=DynamicKubeletConfig=false"
-  # - "protect-kernel-defaults=true"
-  # - "streaming-connection-idle-timeout=5m"
-#
-#  # Available in RKE2 1.21
-  #etcd-extra-env:
-  #- "ETCD_AUTO_TLS=true"
-  #- "ETCD_PEER_AUTO_TLS=true"
-#
+  profile: cis-1.6
+  kube-controller-manager-arg:
+  - "tls-min-version=VersionTLS12"
+  - "tls-cipher-suites=TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384"
+  kube-scheduler-arg:
+  - "tls-min-version=VersionTLS12"
+  - "tls-cipher-suites=TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384"
+  kube-apiserver-arg:
+  - "tls-min-version=VersionTLS12"
+  - "tls-cipher-suites=TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384"
+  - "enable-admission-plugins=ValidatingAdmissionWebhook,NodeRestriction,PodSecurityPolicy"
+  - "request-timeout=300s"
+ # Enable only when auditing is enabled, blocks API when audit fails
+ #- "audit-log-mode=blocking-strict"
+
+  kubelet-arg:
+  - "feature-gates=DynamicKubeletConfig=false"
+  - "protect-kernel-defaults=true"
+  - "streaming-connection-idle-timeout=5m"
+
+ # Available in RKE2 1.21
+  etcd-extra-env:
+  - "ETCD_AUTO_TLS=true"
+  - "ETCD_PEER_AUTO_TLS=true"
+
   write-kubeconfig-mode: "0640"
   token: "K1008e561729e450c076107549ab9ad8a63fa975ad73abc3de79145fa5e115d43b1::server:c493f1a06779ba746fadbadc76ea3045"
   tls-san:
