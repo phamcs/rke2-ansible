@@ -3,6 +3,7 @@
   hosts: rke2_servers
   any_errors_fatal: true
   become: true
+  become_user: root
   roles:
     - role: rke2_server
   serial: 5
@@ -11,6 +12,7 @@
   hosts: rke2_agents
   any_errors_fatal: true
   become: true
+  become_user: root
   roles:
     - role: rke2_agent
   serial: 10
@@ -19,5 +21,6 @@
   hosts: rke2_servers
   any_errors_fatal: true
   become: true
+  become_user: root
   roles:
     - role: cluster_manifest
