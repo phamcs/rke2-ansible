@@ -47,8 +47,8 @@ rke2_config:
   # server: "https://10.0.0.202:9345"
   hosts:
     infra01:
-    node_labels:
-      - server1Label=true
+    # node_labels:
+    # - server1Label=true
       node_ip: "10.0.0.21"
       node_name: "infra01"
       bind_address: "10.0.0.21"
