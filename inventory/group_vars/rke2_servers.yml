@@ -35,13 +35,13 @@ rke2_config:
   write-kubeconfig-mode: "0640"
   # token: "K1055b583da31e9673178ac963c82f8ddebb15f9fd9290d615129b289fa6194a32c::server:aa08135936f30602bf50e5a9c2f29909"
   tls-san:
-  - "192.168.0.21"
+  - "10.0.0.21"
   - "infra01"
-  - "192.168.0.22"
+  - "10.0.0.22"
   - "infra02"
-  - "192.168.0.23"
+  - "10.0.0.23"
   - "infra03"
-  - "192.168.0.202"
+  - "10.0.0.202"
   - "rke2vip.superasian.net"
   cni: calico
   # server: "https://rke2vip.superasian.net:9345"
@@ -49,10 +49,10 @@ rke2_config:
   #   infra01:
   #   # node_labels:
   #   #   - server1Label=true
-  #     node_ip: "192.168.0.21"
+  #     node_ip: "10.0.0.21"
   #     node_name: "infra01"
-  #     bind_address: "192.168.0.21"
-  #     advertise_address: "192.168.0.21"
+  #     bind_address: "10.0.0.21"
+  #     advertise_address: "10.0.0.21"
     # node_external_ip: "52.52.52.52"
     # node_taints:
     # - CriticalAddonsOnly=true:NoSchedule
@@ -60,10 +60,10 @@ rke2_config:
   #   infra02:
   #     # node_labels:
   #     #   - server2Label=true
-  #     node_ip: "192.168.0.22"
+  #     node_ip: "10.0.0.22"
   #     node_name: "infra02"
-  #     bind_address: "192.168.0.22"
-  #     advertise_address: "192.168.0.22"
+  #     bind_address: "10.0.0.22"
+  #     advertise_address: "10.0.0.22"
   # #     # node_external_ip: "52.52.52.52"
   # #     # node_taints:
   # #     # - CriticalAddonsOnly=true:NoSchedule
@@ -71,10 +71,10 @@ rke2_config:
   #   infra03:
   #     # node_labels:
   #     #   - server3Label=true
-  #     node_ip: "192.168.0.23"
+  #     node_ip: "10.0.0.23"
   #     node_name: "infra03"
-  #     bind_address: "192.168.0.23"
-  #     advertise_address: "192.168.0.23"
+  #     bind_address: "10.0.0.23"
+  #     advertise_address: "10.0.0.23"
   #     # node_external_ip: "52.52.52.52"
   #     # node_taints:
   #     # - CriticalAddonsOnly=true:NoSchedule
