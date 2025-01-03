@@ -11,19 +11,15 @@
 rke2_config:
   debug: true
   cni: calico
-  #hosts:
-    # w0rk3r01:
-    #   node_ip: "192.168.0.20"
-    #   node_name: "w0rk3r01"
-    #   bind_address: "192.168.0.20"
-    #   advertise_address: "192.168.0.20"
-    # w0rk3r02:
-    #   node_ip: "192.168.0.14"
-    #   node_name: "w0rk3r02"
-    #   bind_address: "192.168.0.14"
-    #   advertise_address: "192.168.0.14"
-    # w0rk3r03:
-    #   node_ip: "192.168.0.18"
-    #   node_name: "w0rk3r03"
-    #   bind_address: "192.168.0.18"
-    #   advertise_address: "192.168.0.18"
+  hosts:
+    w0rk3r01:
+      node_ip: "10.0.0.14"
+      node_name: "w0rk3r01"
+      bind_address: "10.0.0.14"
+      advertise_address: "10.0.0.14"
+    w0rk3r02:
+      node_ip: "10.0.0.16"
+      node_name: "w0rk3r02"
+      bind_address: "10.0.0.16"
+      advertise_address: "10.0.0.16"
+
