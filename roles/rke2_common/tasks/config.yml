@@ -49,13 +49,13 @@
     all_node_labels: "{{ rke2_config_node_labels + host_var_node_labels }}"
   changed_when: false
 
-# - name: Add node labels to rke2_config
-#   ansible.utils.update_fact:
-#     updates:
-#       - path: rke2_config["node-label"]
-#         value: "{{ all_node_labels }}"
-#   register: updated_rke2_config
-#   changed_when: false
+- name: Add node labels to rke2_config
+  ansible.utils.update_fact:
+    updates:
+      - path: rke2_config["node-label"]
+        value: "{{ all_node_labels }}"
+  register: updated_rke2_config
+  changed_when: false
 
 - name: Update rke2_config to take value of updated_rke2_config
   ansible.builtin.set_fact:
