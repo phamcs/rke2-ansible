@@ -4,6 +4,10 @@
 #rke2_config: {}
 
 rke2_config:
+  debug: true
+  cni: calico
+  node_labels:
+    - serverGroupLabel=true
   hosts:
     infra01:
       node_ip: "10.0.0.21"
