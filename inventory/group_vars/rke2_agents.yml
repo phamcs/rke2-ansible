@@ -11,6 +11,8 @@
 rke2_config:
   debug: true
   cni: calico
+  node_labels:
+    - agentGroupLabel=true
   hosts:
     w0rk3r1:
       node_ip: "10.0.0.14"
