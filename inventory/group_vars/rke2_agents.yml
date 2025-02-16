@@ -14,14 +14,14 @@ rke2_config:
   node_labels:
     - agentGroupLabel=true
   hosts:
-    w0rk3r1:
-      node_ip: "10.0.0.14"
-      node_name: "w0rk3r1"
-      bind_address: "10.0.0.14"
-      advertise_address: "10.0.0.14"
     w0rk3r2:
-      node_ip: "10.0.0.16"
+      node_ip: "10.0.0.25"
       node_name: "w0rk3r2"
-      bind_address: "10.0.0.16"
-      advertise_address: "10.0.0.16"
+      bind_address: "10.0.0.25"
+      advertise_address: "10.0.0.25"
+    w0rk3r3:
+      node_ip: "10.0.0.24"
+      node_name: "w0rk3r3"
+      bind_address: "10.0.0.24"
+      advertise_address: "10.0.0.24"
 
